@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>DOWNLOAD/DELETE</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+        <h1>{{ header }}</h1>
+        <h2>ダウンロード・削除するファイルを選択</h2>
+        <table>
+            <tr>
+                <th>File Name</th>
+                <th>Download</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in files %}
+                <tr>
+                    <td>{{ i }}</td>
+                    <td>
+                        <a href="/download/{{ i }}" class="download">ダウンロード</a>
+                    </td>
+                    <td><a href="/output_delete/{{ i }}" class="delete">削除</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td>ファイルがありません</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            {% endfor %}
+        </table> 
+        <p><a href="/">一覧画面に戻る</a></p>
+    </body>
+</html>

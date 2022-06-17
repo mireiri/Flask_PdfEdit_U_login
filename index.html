@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>INDEX</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+        <h1>{{ header }}</h1>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flashmsg"><b>{{ message }}</b></p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Upload Date</th>
+                <th>Data Delete</th>
+                <th>PDF Edit</th>
+            </tr>
+            {% for i in all_data %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.title }}</td>
+                    <td>{{ i.date.date() }}</td>
+                    <td>
+                        <a href="/delete/{{ i.data_id }}" class="delete">
+                            アップロードデータの削除
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/graph/{{ i.data_id }}" class="pdf-edit">
+                            PDF編集
+                        </a>
+                    </td>   
+                </tr>
+            {% else %}
+                <tr>
+                    <td>データがありません</td>
+                    <td>データがありません</td>
+                    <td>データがありません</td>
+                    <td>データがありません</td>
+                    <td>データがありません</td>
+                </tr>
+            {% endfor %}               
+        </table>
+        <p>
+            <a href="/upload" class="general">アップロード</a> | 
+            <a href="/dd" class="general">ダウンロード・削除</a> | 
+            <a href="/logout" class="general">ログアウト</a>
+        </p>
+    </body>
+</html>

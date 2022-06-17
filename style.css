@@ -1,0 +1,65 @@
+body {
+    padding: 30px;
+    background-color: whitesmoke;
+}
+h1 {
+    background-color: darkslateblue;
+    width: 800px;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+.flashmsg {
+    background-color: lightblue;
+    width: 50vw;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 800px;
+    text-align: center;
+}
+table th {
+    background-color: black;
+    color: white;
+    border: solid 1px black;
+    height: 30px;
+}
+ table td {
+    border: solid 1px black;
+    height: 50px;
+}
+.delete {
+    border-radius: 5px;
+    background-color: red;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.pdf-edit {
+    border-radius: 5px;
+    background-color: darkslateblue;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+.general {
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.download {
+    border-radius: 5px;
+    background-color: green;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>SIGNUP</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+        <h1>{{ header }}</h1>
+        <h2>サインアップ</h2>
+        <form method="POST">
+            <p>
+                <label for="name">User Name : </label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="password">PassWord : </label>
+                <input type="password" name="password" id="password">
+            </p>
+            <p>
+                <button type="submit">サインアップ</button>
+                <button type="reset">リセット</button>
+            </p>
+        </form>
+        <p><a href="/">ログイン画面に戻る</a></p>
+    </body>
+</html>

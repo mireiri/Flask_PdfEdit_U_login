@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body>
+        <h1>{{ header }}</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flashmsg"><b>{{ message }}</b></p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <h2>ログイン</h2>
+        <form method="POST">
+            <p>
+                <label for="userame">User Name : </label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p>
+                <label for="password">PassWord : </label>
+                <input type="password" name="password" id="password">
+            </p>
+            <p>
+                <button type="submit">ログイン</button>
+                <button type="reset">リセット</button>
+            </p>
+        </form>
+        <p><a href="/signup">サインアップ画面へ</a></p>
+    </body>
+</html>
