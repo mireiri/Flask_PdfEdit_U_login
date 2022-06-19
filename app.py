@@ -144,7 +144,7 @@ def upload():
         db.session.add(register_data)
         db.session.commit()
         flash('アップロードに成功しました')
-        return redirect('/')
+        return redirect(url_for('index'))
     else:
         header = '<Flask>PDF編集アプリケーション'
         return render_template('upload.html', header=header)
